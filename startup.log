@@ -1,0 +1,203 @@
+2025-06-04 10:18:13,036 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-06-04 10:18:13,111 - arkitect.startup - INFO - Iniciando ARKITECT em modo standalone
+2025-06-04 10:18:13,112 - arkitect.startup - INFO - Modo de desenvolvimento ativo
+2025-06-04 10:18:13,113 - arkitect.startup - INFO - Verificando Versão do Python...
+2025-06-04 10:18:13,113 - arkitect.startup - INFO - Verificando Dependências...
+2025-06-04 10:18:13,291 - arkitect.startup - DEBUG - Verificando aiohttp: versão instalada 3.12.6, mínima 3.8.0
+2025-06-04 10:18:13,587 - arkitect.startup - DEBUG - Verificando fastapi: versão instalada 0.115.12, mínima 0.68.0
+2025-06-04 10:18:13,663 - arkitect.startup - DEBUG - Verificando uvicorn: versão instalada 0.34.3, mínima 0.15.0
+2025-06-04 10:18:13,708 - arkitect.startup - DEBUG - Verificando redis: versão instalada 6.2.0, mínima 4.0.0
+2025-06-04 10:18:13,708 - arkitect.startup - DEBUG - Verificando pydantic: versão instalada 2.11.5, mínima 1.8.0
+2025-06-04 10:18:13,740 - arkitect.startup - DEBUG - Verificando prometheus_client: versão instalada unknown, mínima 0.12.0
+2025-06-04 10:18:13,741 - arkitect.startup - ERROR - Versões incompatíveis: aiohttp (atual: 3.12.6, necessária: 3.8.0), fastapi (atual: 0.115.12, necessária: 0.68.0)
+2025-06-04 10:18:13,741 - arkitect.startup - INFO - Verificando Conexão Redis...
+2025-06-04 10:18:13,760 - arkitect.startup - INFO - Verificando Conexão EON-Framework...
+2025-06-04 10:18:13,760 - arkitect.startup - INFO - Modo standalone ativo, ignorando verificação do EON-Framework
+2025-06-04 10:18:13,760 - arkitect.startup - INFO - Verificando Arquivo .env...
+2025-06-04 10:18:13,764 - arkitect.startup - INFO - Iniciando em modo standalone
+2025-06-04 10:18:13,764 - arkitect.startup - ERROR - Algumas verificações falharam
+2025-06-04 10:18:13,905 - asyncio - DEBUG - Close <ProactorEventLoop running=False closed=False debug=True>
+2025-06-04 10:19:06,679 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-06-04 10:19:06,689 - arkitect.startup - INFO - Iniciando ARKITECT em modo standalone
+2025-06-04 10:19:06,690 - arkitect.startup - INFO - Modo de desenvolvimento ativo
+2025-06-04 10:19:06,690 - arkitect.startup - INFO - Verificando Versão do Python...
+2025-06-04 10:19:06,690 - arkitect.startup - INFO - Verificando Dependências...
+2025-06-04 10:19:06,932 - arkitect.startup - DEBUG - Verificando aiohttp: versão instalada 3.12.6, mínima 3.8.0
+2025-06-04 10:19:07,315 - arkitect.startup - DEBUG - Verificando fastapi: versão instalada 0.115.12, mínima 0.68.0
+2025-06-04 10:19:07,373 - arkitect.startup - DEBUG - Verificando uvicorn: versão instalada 0.34.3, mínima 0.15.0
+2025-06-04 10:19:07,423 - arkitect.startup - DEBUG - Verificando redis: versão instalada 6.2.0, mínima 4.0.0
+2025-06-04 10:19:07,424 - arkitect.startup - DEBUG - Verificando pydantic: versão instalada 2.11.5, mínima 1.8.0
+2025-06-04 10:19:07,462 - arkitect.startup - DEBUG - Verificando prometheus_client: versão instalada unknown, mínima 0.12.0
+2025-06-04 10:19:07,463 - arkitect.startup - INFO - Todas as dependências verificadas com sucesso
+2025-06-04 10:19:07,463 - arkitect.startup - INFO - Verificando Conexão Redis...
+2025-06-04 10:19:07,483 - arkitect.startup - INFO - Verificando Conexão EON-Framework...
+2025-06-04 10:19:07,483 - arkitect.startup - INFO - Modo standalone ativo, ignorando verificação do EON-Framework
+2025-06-04 10:19:07,484 - arkitect.startup - INFO - Verificando Arquivo .env...
+2025-06-04 10:19:07,488 - arkitect.startup - INFO - Iniciando em modo standalone
+2025-06-04 10:19:07,490 - arkitect.startup - INFO - Todas as verificações passaram com sucesso
+2025-06-04 10:19:07,490 - arkitect.startup - INFO - Iniciando ARKITECT...
+2025-06-04 10:19:07,490 - arkitect.startup - DEBUG - Tentando importar e iniciar o módulo principal
+2025-06-04 10:19:07,541 - arkitect.startup - ERROR - Erro ao iniciar ARKITECT: 
+2025-06-04 10:19:07,541 - arkitect.startup - ERROR - Detalhes do erro:
+2025-06-04 10:19:07,544 - arkitect.startup - ERROR - Traceback (most recent call last):
+  File "C:\Users\João\Desktop\PROJETOS\FERRAMENTAS\ARKITECT\start.py", line 188, in main
+    await arkitect_main()
+  File "C:\Users\João\Desktop\PROJETOS\FERRAMENTAS\ARKITECT\main.py", line 156, in main
+    loop.add_signal_handler(
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 574, in add_signal_handler
+    raise NotImplementedError
+NotImplementedError
+
+2025-06-04 10:19:07,550 - asyncio - DEBUG - Close <ProactorEventLoop running=False closed=False debug=True>
+2025-06-04 10:19:54,566 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-06-04 10:19:54,571 - arkitect.startup - INFO - Iniciando ARKITECT em modo standalone
+2025-06-04 10:19:54,572 - arkitect.startup - INFO - Modo de desenvolvimento ativo
+2025-06-04 10:19:54,572 - arkitect.startup - INFO - Verificando Versão do Python...
+2025-06-04 10:19:54,572 - arkitect.startup - INFO - Verificando Dependências...
+2025-06-04 10:19:54,708 - arkitect.startup - DEBUG - Verificando aiohttp: versão instalada 3.12.6, mínima 3.8.0
+2025-06-04 10:19:54,977 - arkitect.startup - DEBUG - Verificando fastapi: versão instalada 0.115.12, mínima 0.68.0
+2025-06-04 10:19:55,024 - arkitect.startup - DEBUG - Verificando uvicorn: versão instalada 0.34.3, mínima 0.15.0
+2025-06-04 10:19:55,063 - arkitect.startup - DEBUG - Verificando redis: versão instalada 6.2.0, mínima 4.0.0
+2025-06-04 10:19:55,064 - arkitect.startup - DEBUG - Verificando pydantic: versão instalada 2.11.5, mínima 1.8.0
+2025-06-04 10:19:55,097 - arkitect.startup - DEBUG - Verificando prometheus_client: versão instalada unknown, mínima 0.12.0
+2025-06-04 10:19:55,097 - arkitect.startup - INFO - Todas as dependências verificadas com sucesso
+2025-06-04 10:19:55,098 - arkitect.startup - INFO - Verificando Conexão Redis...
+2025-06-04 10:19:55,109 - arkitect.startup - INFO - Verificando Conexão EON-Framework...
+2025-06-04 10:19:55,109 - arkitect.startup - INFO - Modo standalone ativo, ignorando verificação do EON-Framework
+2025-06-04 10:19:55,110 - arkitect.startup - INFO - Verificando Arquivo .env...
+2025-06-04 10:19:55,113 - arkitect.startup - INFO - Iniciando em modo standalone
+2025-06-04 10:19:55,113 - arkitect.startup - INFO - Todas as verificações passaram com sucesso
+2025-06-04 10:19:55,113 - arkitect.startup - INFO - Iniciando ARKITECT...
+2025-06-04 10:19:55,114 - arkitect.startup - DEBUG - Tentando importar e iniciar o módulo principal
+2025-06-04 10:19:55,130 - arkitect.main - INFO - Iniciando sistema ARKITECT
+2025-06-04 10:19:55,142 - arkitect.main - INFO - Servidor de métricas iniciado na porta 9090
+2025-06-04 10:19:55,147 - arkitect.main - ERROR - Erro durante execução do sistema: asyncio.run() cannot be called from a running event loop
+2025-06-04 10:19:55,147 - arkitect.main - ERROR - Erro fatal: asyncio.run() cannot be called from a running event loop
+2025-06-04 10:19:55,148 - arkitect.main - INFO - Finalizando sistema...
+2025-06-04 10:19:55,148 - arkitect.main - INFO - Iniciando graceful shutdown do ARKITECT
+2025-06-04 10:19:55,148 - development.orchestrator - INFO - Parando orquestrador de desenvolvimento
+2025-06-04 10:19:55,148 - task_executor - INFO - Parando executor de tarefas
+2025-06-04 10:19:55,148 - integration.eon_framework - INFO - Desconectado do serviço: eon_framework
+2025-06-04 10:19:55,148 - arkitect.main - INFO - Sistema ARKITECT finalizado com sucesso
+2025-06-04 10:19:55,148 - arkitect.main - ERROR - Erro durante execução: asyncio.run() cannot be called from a running event loop
+2025-06-04 10:19:55,148 - arkitect.startup - ERROR - Erro ao iniciar ARKITECT: asyncio.run() cannot be called from a running event loop
+2025-06-04 10:19:55,148 - arkitect.startup - ERROR - Detalhes do erro:
+2025-06-04 10:19:55,198 - arkitect.startup - ERROR - Traceback (most recent call last):
+  File "C:\Users\João\Desktop\PROJETOS\FERRAMENTAS\ARKITECT\start.py", line 188, in main
+    await arkitect_main()
+  File "C:\Users\João\Desktop\PROJETOS\FERRAMENTAS\ARKITECT\main.py", line 180, in main
+    await run_arkitect()
+  File "C:\Users\João\Desktop\PROJETOS\FERRAMENTAS\ARKITECT\main.py", line 166, in run_arkitect
+    await controller.start()
+  File "C:\Users\João\Desktop\PROJETOS\FERRAMENTAS\ARKITECT\main.py", line 73, in start
+    uvicorn.run(
+  File "C:\Users\João\AppData\Roaming\Python\Python311\site-packages\uvicorn\main.py", line 580, in run
+    server.run()
+  File "C:\Users\João\AppData\Roaming\Python\Python311\site-packages\uvicorn\server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\asyncio\runners.py", line 186, in run
+    raise RuntimeError(
+RuntimeError: asyncio.run() cannot be called from a running event loop
+
+2025-06-04 10:19:55,204 - asyncio - DEBUG - Close <ProactorEventLoop running=False closed=False debug=True>
+2025-06-04 10:20:38,933 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-06-04 10:20:38,938 - arkitect.startup - INFO - Iniciando ARKITECT em modo standalone
+2025-06-04 10:20:38,938 - arkitect.startup - INFO - Modo de desenvolvimento ativo
+2025-06-04 10:20:38,939 - arkitect.startup - INFO - Verificando Versão do Python...
+2025-06-04 10:20:38,939 - arkitect.startup - INFO - Verificando Dependências...
+2025-06-04 10:20:39,096 - arkitect.startup - DEBUG - Verificando aiohttp: versão instalada 3.12.6, mínima 3.8.0
+2025-06-04 10:20:39,376 - arkitect.startup - DEBUG - Verificando fastapi: versão instalada 0.115.12, mínima 0.68.0
+2025-06-04 10:20:39,432 - arkitect.startup - DEBUG - Verificando uvicorn: versão instalada 0.34.3, mínima 0.15.0
+2025-06-04 10:20:39,479 - arkitect.startup - DEBUG - Verificando redis: versão instalada 6.2.0, mínima 4.0.0
+2025-06-04 10:20:39,480 - arkitect.startup - DEBUG - Verificando pydantic: versão instalada 2.11.5, mínima 1.8.0
+2025-06-04 10:20:39,520 - arkitect.startup - DEBUG - Verificando prometheus_client: versão instalada unknown, mínima 0.12.0
+2025-06-04 10:20:39,520 - arkitect.startup - INFO - Todas as dependências verificadas com sucesso
+2025-06-04 10:20:39,521 - arkitect.startup - INFO - Verificando Conexão Redis...
+2025-06-04 10:20:39,534 - arkitect.startup - INFO - Verificando Conexão EON-Framework...
+2025-06-04 10:20:39,535 - arkitect.startup - INFO - Modo standalone ativo, ignorando verificação do EON-Framework
+2025-06-04 10:20:39,535 - arkitect.startup - INFO - Verificando Arquivo .env...
+2025-06-04 10:20:39,539 - arkitect.startup - INFO - Iniciando em modo standalone
+2025-06-04 10:20:39,539 - arkitect.startup - INFO - Todas as verificações passaram com sucesso
+2025-06-04 10:20:39,540 - arkitect.startup - INFO - Iniciando ARKITECT...
+2025-06-04 10:20:39,540 - arkitect.startup - DEBUG - Tentando importar e iniciar o módulo principal
+2025-06-04 10:20:39,557 - arkitect.main - INFO - Iniciando sistema ARKITECT
+2025-06-04 10:20:39,564 - arkitect.main - INFO - Servidor de métricas iniciado na porta 9090
+2025-06-04 10:20:39,566 - development.orchestrator - INFO - Iniciando orquestrador de desenvolvimento
+2025-06-04 10:20:39,626 - integration.eon_framework - INFO - Conectado ao serviço: eon_framework
+2025-06-04 10:20:39,626 - task_executor - INFO - Iniciando executor de tarefas
+2025-06-04 10:20:39,628 - asyncio - WARNING - Executing <Task pending name='Task-1' coro=<main() running at C:\Users\João\Desktop\PROJETOS\FERRAMENTAS\ARKITECT\start.py:188> wait_for=<Future pending cb=[Task.task_wakeup()] created at C:\Program Files\Python311\Lib\asyncio\base_events.py:427> cb=[_run_until_complete_cb() at C:\Program Files\Python311\Lib\asyncio\base_events.py:180] created at C:\Program Files\Python311\Lib\asyncio\runners.py:100> took 0.703 seconds
+2025-06-04 10:20:40,015 - asyncio - WARNING - Executing <Task pending name='Task-2' coro=<Server.serve() running at C:\Users\João\AppData\Roaming\Python\Python311\site-packages\uvicorn\server.py:70> wait_for=<Future pending cb=[Task.task_wakeup()] created at C:\Program Files\Python311\Lib\asyncio\base_events.py:427> created at C:\Program Files\Python311\Lib\asyncio\tasks.py:374> took 0.375 seconds
+2025-06-04 10:20:40,338 - asyncio - WARNING - Executing <Task pending name='Task-3' coro=<LifespanOn.main() running at C:\Users\João\AppData\Roaming\Python\Python311\site-packages\uvicorn\lifespan\on.py:86> wait_for=<Future pending cb=[Task.task_wakeup()] created at C:\Program Files\Python311\Lib\asyncio\base_events.py:427> created at C:\Users\João\AppData\Roaming\Python\Python311\site-packages\uvicorn\lifespan\on.py:51> took 0.328 seconds
+2025-06-04 10:20:40,372 - asyncio - DEBUG - Get address info localhost:8000, type=<SocketKind.SOCK_STREAM: 1>, flags=<AddressInfo.AI_PASSIVE: 1>
+2025-06-04 10:20:40,373 - asyncio - DEBUG - Getting address info localhost:8000, type=<SocketKind.SOCK_STREAM: 1>, flags=<AddressInfo.AI_PASSIVE: 1> took 0.000ms: [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 0, '', ('::1', 8000, 0, 0)), (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 0, '', ('127.0.0.1', 8000))]
+2025-06-04 10:20:40,395 - asyncio - INFO - <Server sockets=(<asyncio.TransportSocket fd=928, family=23, type=1, proto=0, laddr=('::1', 8000, 0, 0)>, <asyncio.TransportSocket fd=968, family=2, type=1, proto=0, laddr=('127.0.0.1', 8000)>)> is serving
+2025-06-04 10:22:18,563 - asyncio - DEBUG - <Server sockets=(<asyncio.TransportSocket fd=928, family=23, type=1, proto=0, laddr=('::1', 8000, 0, 0)>, <asyncio.TransportSocket fd=968, family=2, type=1, proto=0, laddr=('127.0.0.1', 8000)>)> got a new connection from ('::1', 61494, 0, 0): <socket.socket fd=1020, family=23, type=1, proto=0, laddr=('::1', 8000, 0, 0), raddr=('::1', 61494, 0, 0)>
+2025-06-04 10:22:18,853 - asyncio - DEBUG - <Server sockets=(<asyncio.TransportSocket fd=928, family=23, type=1, proto=0, laddr=('::1', 8000, 0, 0)>, <asyncio.TransportSocket fd=968, family=2, type=1, proto=0, laddr=('127.0.0.1', 8000)>)> got a new connection from ('::1', 61495, 0, 0): <socket.socket fd=952, family=23, type=1, proto=0, laddr=('::1', 8000, 0, 0), raddr=('::1', 61495, 0, 0)>
+2025-06-04 10:31:03,224 - asyncio - DEBUG - <_ProactorSocketTransport fd=952> received EOF
+2025-06-04 10:32:41,979 - arkitect.main - INFO - Sinal de shutdown recebido: 2
+2025-06-04 10:32:41,982 - arkitect.main - INFO - Finalizando sistema...
+2025-06-04 10:32:41,982 - arkitect.main - INFO - Iniciando graceful shutdown do ARKITECT
+2025-06-04 10:32:41,983 - arkitect.main - INFO - Parando servidor API...
+2025-06-04 10:32:42,092 - development.orchestrator - INFO - Parando orquestrador de desenvolvimento
+2025-06-04 10:32:42,093 - task_executor - INFO - Parando executor de tarefas
+2025-06-04 10:32:42,097 - integration.eon_framework - INFO - Desconectado do serviço: eon_framework
+2025-06-04 10:32:42,098 - arkitect.main - INFO - Sistema ARKITECT finalizado com sucesso
+2025-06-04 10:32:42,103 - asyncio - DEBUG - Close <ProactorEventLoop running=False closed=False debug=True>
+2025-06-04 10:32:42,161 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<Server.serve() done, defined at C:\Users\João\AppData\Roaming\Python\Python311\site-packages\uvicorn\server.py:68> exception=GracefulExit() created at C:\Program Files\Python311\Lib\asyncio\tasks.py:374>
+source_traceback: Object created at (most recent call last):
+  File "C:\Users\João\Desktop\PROJETOS\FERRAMENTAS\ARKITECT\start.py", line 240, in <module>
+    asyncio.run(main())
+  File "C:\Program Files\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+  File "C:\Program Files\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Program Files\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+  File "C:\Program Files\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Program Files\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+  File "C:\Program Files\Python311\Lib\asyncio\base_events.py", line 1914, in _run_once
+    handle._run()
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\João\Desktop\PROJETOS\FERRAMENTAS\ARKITECT\start.py", line 188, in main
+    await arkitect_main()
+  File "C:\Users\João\Desktop\PROJETOS\FERRAMENTAS\ARKITECT\main.py", line 194, in main
+    await run_arkitect()
+  File "C:\Users\João\Desktop\PROJETOS\FERRAMENTAS\ARKITECT\main.py", line 180, in run_arkitect
+    await controller.start()
+  File "C:\Users\João\Desktop\PROJETOS\FERRAMENTAS\ARKITECT\main.py", line 87, in start
+    api_task = asyncio.create_task(server.serve())
+  File "C:\Program Files\Python311\Lib\asyncio\tasks.py", line 374, in create_task
+    task = loop.create_task(coro)
+Traceback (most recent call last):
+  File "C:\Users\João\Desktop\PROJETOS\FERRAMENTAS\ARKITECT\start.py", line 240, in <module>
+    asyncio.run(main())
+  File "C:\Program Files\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+  File "C:\Program Files\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Program Files\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+  File "C:\Program Files\Python311\Lib\asyncio\base_events.py", line 1914, in _run_once
+    handle._run()
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\João\AppData\Roaming\Python\Python311\site-packages\uvicorn\server.py", line 69, in serve
+    with self.capture_signals():
+  File "C:\Program Files\Python311\Lib\contextlib.py", line 144, in __exit__
+    next(self.gen)
+  File "C:\Users\João\AppData\Roaming\Python\Python311\site-packages\uvicorn\server.py", line 330, in capture_signals
+    signal.raise_signal(captured_signal)
+  File "C:\Users\João\Desktop\PROJETOS\FERRAMENTAS\ARKITECT\main.py", line 168, in handle_shutdown
+    raise GracefulExit()
+main.GracefulExit

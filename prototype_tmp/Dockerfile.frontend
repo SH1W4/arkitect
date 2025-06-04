@@ -1,0 +1,5 @@
+FROM python:3.10-slim
+WORKDIR /frontend
+COPY arkitect_frontend /frontend
+RUN pip install streamlit pyvis
+CMD ["streamlit", "run", "app.py"]
