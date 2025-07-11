@@ -1,0 +1,107 @@
+# ARKITECT Grafana Datasources Configuration
+# Configuração automática das fontes de dados
+
+apiVersion: 1
+
+datasources:
+  # Prometheus como fonte principal de métricas
+  - name: ARKITECT-Prometheus
+    type: prometheus
+    access: proxy
+    url: http://prometheus:9090
+    isDefault: true
+    basicAuth: false
+    editable: true
+    jsonData:
+      timeInterval: "15s"
+      queryTimeout: "60s"
+      httpMethod: "POST"
+      exemplarTraceIdDestinations:
+        - name: trace_id
+          datasourceUid: tempo
+    secureJsonData: {}
+    version: 1
+
+  # PostgreSQL para dados históricos
+  - name: ARKITECT-PostgreSQL
+    type: postgres
+    access: proxy
+    url: postgres:5432
+    database: arkitect
+    user: arkitect
+    basicAuth: false
+    isDefault: false
+    editable: true
+    jsonData:
+      sslmode: "disable"
+      maxOpenConns: 100
+      maxIdleConns: 100
+      maxIdleConnsAuto: true
+      connMaxLifetime: 14400
+      postgresVersion: 1500
+      timescaledb: false
+    secureJsonData:
+      password: "arkitect_pass"
+    version: 1
+
+  # Redis para métricas de cache
+  - name: ARKITECT-Redis
+    type: redis-datasource
+    access: proxy
+    url: redis:6379
+    isDefault: false
+    editable: true
+    jsonData:
+      client: "standalone"
+      poolSize: 5
+      timeout: 10
+      pingInterval: 0
+      pipelineWindow: 0
+    secureJsonData: {}
+    version: 1
+
+  # MinIO/S3 metrics (se disponível)
+  - name: ARKITECT-MinIO
+    type: cloudwatch
+    access: proxy
+    url: http://minio:9000
+    isDefault: false
+    editable: true
+    jsonData:
+      authType: "keys"
+      defaultRegion: "us-east-1"
+      endpoint: "http://minio:9000"
+      assumeRoleArn: ""
+      externalId: ""
+      database: ""
+      customMetricsNamespaces: "MinIO"
+    secureJsonData:
+      accessKey: "arkitect"
+      secretKey: "arkitect_secret"
+    version: 1
+
+  # Logs (se Loki estiver configurado)
+  # - name: ARKITECT-Loki
+  #   type: loki
+  #   access: proxy
+  #   url: http://loki:3100
+  #   isDefault: false
+  #   editable: true
+  #   jsonData:
+  #     maxLines: 1000
+  #   version: 1
+
+  # Tempo for traces (se configurado)
+  # - name: ARKITECT-Tempo
+  #   uid: tempo
+  #   type: tempo
+  #   access: proxy
+  #   url: http://tempo:3200
+  #   isDefault: false
+  #   editable: true
+  #   jsonData:
+  #     httpMethod: GET
+  #     serviceMap:
+  #       datasourceUid: 'prometheus'
+  #   version: 1
+

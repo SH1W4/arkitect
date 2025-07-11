@@ -1,0 +1,11 @@
+C:\Users\João\Desktop\PROJETOS\FERRAMENTAS\ARKITECT\orchestrator_core\target\debug\deps\libbackoff-cae39b870e7de41f.rmeta: C:\Users\João\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\backoff-0.4.0\src\lib.rs C:\Users\João\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\backoff-0.4.0\src\backoff.rs C:\Users\João\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\backoff-0.4.0\src\clock.rs C:\Users\João\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\backoff-0.4.0\src\default.rs C:\Users\João\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\backoff-0.4.0\src\error.rs C:\Users\João\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\backoff-0.4.0\src\exponential.rs C:\Users\João\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\backoff-0.4.0\src\retry.rs
+
+C:\Users\João\Desktop\PROJETOS\FERRAMENTAS\ARKITECT\orchestrator_core\target\debug\deps\backoff-cae39b870e7de41f.d: C:\Users\João\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\backoff-0.4.0\src\lib.rs C:\Users\João\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\backoff-0.4.0\src\backoff.rs C:\Users\João\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\backoff-0.4.0\src\clock.rs C:\Users\João\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\backoff-0.4.0\src\default.rs C:\Users\João\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\backoff-0.4.0\src\error.rs C:\Users\João\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\backoff-0.4.0\src\exponential.rs C:\Users\João\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\backoff-0.4.0\src\retry.rs
+
+C:\Users\João\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\backoff-0.4.0\src\lib.rs:
+C:\Users\João\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\backoff-0.4.0\src\backoff.rs:
+C:\Users\João\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\backoff-0.4.0\src\clock.rs:
+C:\Users\João\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\backoff-0.4.0\src\default.rs:
+C:\Users\João\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\backoff-0.4.0\src\error.rs:
+C:\Users\João\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\backoff-0.4.0\src\exponential.rs:
+C:\Users\João\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\backoff-0.4.0\src\retry.rs:

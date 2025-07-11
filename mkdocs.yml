@@ -1,0 +1,201 @@
+# ARKITECT Documentation Configuration
+# MkDocs configuration for project documentation
+
+site_name: ARKITECT
+site_description: Plataforma Simbiótica de Meta-Governança para Agentes IA
+site_author: EON Framework Team
+site_url: https://arkitect.eonframework.dev
+
+# Repository
+repo_name: eon-framework/arkitect
+repo_url: https://github.com/eon-framework/arkitect
+edit_uri: edit/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2024 EON Framework Team
+
+# Configuration
+theme:
+  name: material
+  language: pt
+  palette:
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - toc.follow
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
+    - header.autohide
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+  font:
+    text: Roboto
+    code: Roboto Mono
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+
+# Plugins
+plugins:
+  - search:
+      lang: pt
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            merge_init_into_class: true
+            show_submodules: true
+  - git-revision-date-localized:
+      type: datetime
+      locale: pt
+  - minify:
+      minify_html: true
+  - social
+  - tags
+
+# Markdown extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: eon-framework
+      repo: arkitect
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Extra CSS and JavaScript
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# Extra
+extra:
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/eon-framework/arkitect
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/eonframework
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/company/eonframework
+  tags:
+    AI: ai
+    Agentes: agents
+    Simbiose: symbiosis
+    Governança: governance
+    Quantum: quantum
+
+# Navigation
+nav:
+  - Home: index.md
+  - Visão Geral:
+    - ARKITECT_OVERVIEW.md
+    - Arquitetura: INTERNAL_STRUCTURE.md
+    - Fluxo Frontend: FRONTEND_FLOW.md
+  - Guias:
+    - Início Rápido: guides/quickstart.md
+    - Instalação: guides/installation.md
+    - Configuração: guides/configuration.md
+    - Desenvolvimento: DEVELOPMENT.md
+  - API:
+    - Referência: API_REFERENCE.md
+    - Endpoints: api/endpoints.md
+    - Modelos: api/models.md
+    - Autenticação: api/authentication.md
+  - Agentes:
+    - Conceitos: agents/concepts.md
+    - Criação: agents/creation.md
+    - Deploy: agents/deployment.md
+    - Monitoramento: agents/monitoring.md
+  - Core:
+    - Arquitetura: core/architecture.md
+    - Módulos: core/modules.md
+    - Configuração: core/configuration.md
+  - Infraestrutura:
+    - Docker: infrastructure/docker.md
+    - Kubernetes: infrastructure/kubernetes.md
+    - Monitoramento: infrastructure/monitoring.md
+    - Backup: infrastructure/backup.md
+  - Desenvolvimento:
+    - Contribuindo: contributing.md
+    - Testes: development/testing.md
+    - CI/CD: development/cicd.md
+    - Release: development/release.md
+  - Tarefas:
+    - TODO: TODO.md
+    - Sessão: SESSION.md
+  - Sobre:
+    - Licença: about/license.md
+    - Changelog: about/changelog.md
+    - Roadmap: about/roadmap.md
+
+# Watch
+watch:
+  - arkitect/
+  - docs/
+

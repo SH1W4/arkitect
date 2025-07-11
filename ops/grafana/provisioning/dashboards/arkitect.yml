@@ -1,0 +1,58 @@
+# ARKITECT Grafana Dashboards Configuration
+# Configuração automática dos dashboards
+
+apiVersion: 1
+
+providers:
+  # Dashboard provider para ARKITECT
+  - name: 'ARKITECT Dashboards'
+    orgId: 1
+    folder: 'ARKITECT'
+    type: file
+    disableDeletion: false
+    editable: true
+    updateIntervalSeconds: 10
+    allowUiUpdates: true
+    options:
+      path: /etc/grafana/provisioning/dashboards/json
+      foldersFromFilesStructure: true
+
+  # System dashboards
+  - name: 'System Monitoring'
+    orgId: 1
+    folder: 'System'
+    type: file
+    disableDeletion: false
+    editable: true
+    updateIntervalSeconds: 10
+    allowUiUpdates: true
+    options:
+      path: /etc/grafana/provisioning/dashboards/system
+      foldersFromFilesStructure: false
+
+  # Application dashboards
+  - name: 'Application Metrics'
+    orgId: 1
+    folder: 'Applications'
+    type: file
+    disableDeletion: false
+    editable: true
+    updateIntervalSeconds: 10
+    allowUiUpdates: true
+    options:
+      path: /etc/grafana/provisioning/dashboards/apps
+      foldersFromFilesStructure: false
+
+  # Infrastructure dashboards
+  - name: 'Infrastructure'
+    orgId: 1
+    folder: 'Infrastructure'
+    type: file
+    disableDeletion: false
+    editable: true
+    updateIntervalSeconds: 10
+    allowUiUpdates: true
+    options:
+      path: /etc/grafana/provisioning/dashboards/infra
+      foldersFromFilesStructure: false
+

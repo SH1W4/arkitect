@@ -1,0 +1,72 @@
+[package]
+name = "orchestrator_core"
+version = "0.1.0"
+edition = "2021"
+authors = ["ARKITECT Team"]
+description = "Task Mesh IA Orchestrator Core - Sistema de orquestração simbiótica"
+
+[dependencies]
+# Core dependencies
+tokio = { version = "1.0", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+uuid = { version = "1.0", features = ["v4"] }
+chrono = { version = "0.4", features = ["serde"] }
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Graph and DAG
+petgraph = "0.6"
+
+# Async and concurrency
+futures = "0.3"
+tokio-stream = "0.1"
+arc-swap = "1.0"
+
+# Networking and API
+reqwest = { version = "0.11", features = ["json"] }
+hyper = { version = "0.14", features = ["full"] }
+
+# Database and storage
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "sqlite", "chrono", "uuid"] }
+redis = { version = "0.23", features = ["tokio-comp"] }
+rusoto_core = "0.48"
+rusoto_s3 = "0.48"
+sqlite = { version = "0.26", features = ["tokio"] }
+flate2 = "1.0"
+
+# Monitoring and observability
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+prometheus = "0.13"
+
+# Configuration
+config = "0.13"
+
+# Error handling and retry
+fastrand = "2.0"
+backoff = "0.4"
+lazy_static = "1.4"
+
+# Symbiotic consciousness (to be implemented)
+# quantum-bridge = { path = "../quantum_bridge", optional = true }
+# vireon-neural = { path = "../vireon_neural", optional = true }
+
+[features]
+default = []
+# symbiotic-consciousness = ["quantum-bridge", "vireon-neural"]
+quantum-simulation = []
+cluster-mode = []
+
+[[example]]
+name = "error_handling_demo"
+path = "examples/error_handling_demo.rs"
+
+[[example]]
+name = "backup_demo"
+path = "examples/backup_demo.rs"
+
+[lib]
+name = "orchestrator_core"
+path = "src/lib.rs"
+

@@ -1,0 +1,100 @@
+[package]
+name = "arkitect"
+version = "0.1.0"
+edition = "2021"
+authors = ["EON Framework Team <contact@eonframework.dev>"]
+description = "ARKITECT - Plataforma Simbiótica de Meta-Governança para Agentes IA"
+license = "MIT"
+repository = "https://github.com/eon-framework/arkitect"
+readme = "README.md"
+keywords = ["ai", "symbiotic", "governance", "agents", "quantum"]
+categories = ["science", "algorithms", "api-bindings"]
+
+[lib]
+name = "arkitect"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+# PyO3 para bindings Python
+pyo3 = { version = "0.20", features = ["extension-module", "abi3-py39"] }
+
+# Processamento assíncrono
+tokio = { version = "1.35", features = ["full"] }
+async-trait = "0.1"
+futures = "0.3"
+
+# Serialização
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+bincode = "1.3"
+
+# Networking e HTTP
+reqwest = { version = "0.11", features = ["json", "rustls-tls"] }
+tower = "0.4"
+tower-http = { version = "0.5", features = ["cors", "trace"] }
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Criptografia e segurança
+ring = "0.17"
+argon2 = "0.5"
+rand = "0.8"
+
+# Banco de dados e cache
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "postgres", "uuid", "chrono"] }
+redis = { version = "0.24", features = ["tokio-comp", "connection-manager"] }
+
+# Utilitários
+uuid = { version = "1.6", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Metrics e monitoring
+prometheus = { version = "0.13", optional = true }
+
+# Configuração
+config = "0.14"
+
+# Processamento de dados
+rayon = "1.8"
+
+# Quantum computing simulation
+num-complex = { version = "0.4", optional = true }
+ndarray = { version = "0.15", optional = true }
+approx = "0.5"
+
+[dev-dependencies]
+tokio-test = "0.4"
+mockall = "0.12"
+proptest = "1.4"
+
+[features]
+default = ["pyo3/extension-module"]
+
+# Features para diferentes módulos
+core = []
+api = []
+agents = []
+quantum = ["num-complex", "ndarray"]
+monitoring = ["prometheus"]
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[profile.dev]
+opt-level = 0
+debug = true
+overflow-checks = true
+
+# Configurações do maturin
+[tool.maturin]
+module-name = "arkitect._core"
+python-source = "arkitect"
+features = ["pyo3/extension-module"]
+

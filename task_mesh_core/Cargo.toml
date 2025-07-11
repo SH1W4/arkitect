@@ -1,0 +1,99 @@
+[package]
+name = "task_mesh_core"
+version = "0.1.0"
+edition = "2021"
+authors = ["EON Framework Team <contact@eonframework.dev>"]
+description = "TaskMesh Core - Sistema de Orquestração de Tarefas Simbiótico"
+license = "MIT"
+repository = "https://github.com/eon-framework/arkitect"
+readme = "README.md"
+keywords = ["orchestration", "tasks", "symbiotic", "quantum", "async"]
+categories = ["science", "algorithms", "api-bindings"]
+
+[lib]
+name = "task_mesh_core"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+# Core async runtime
+tokio = { version = "1.35", features = ["full"] }
+rayon = "1.8"
+async-trait = "0.1"
+futures = "0.3"
+
+# Serialização
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+bincode = "1.3"
+
+# Banco de dados
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "sqlite", "postgres", "uuid", "chrono"] }
+redis = { version = "0.24", features = ["tokio-comp", "connection-manager"] }
+
+# Utilitários
+uuid = { version = "1.6", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Criptografia
+ring = "0.17"
+rand = "0.8"
+
+# Python bindings
+pyo3 = { version = "0.20", features = ["extension-module", "abi3-py39"], optional = true }
+
+# HTTP client
+reqwest = { version = "0.11", features = ["json", "rustls-tls"] }
+
+# Utilities
+tokio-util = { version = "0.7", features = ["sync"] }
+
+# Grafos e topologia
+petgraph = "0.6"
+
+# Métricas
+prometheus = { version = "0.13", optional = true }
+
+# Configuração
+config = "0.14"
+
+# Processamento numérico
+num-traits = "0.2"
+num_cpus = "1.16"
+
+[dev-dependencies]
+tokio-test = "0.4"
+mockall = "0.12"
+proptest = "1.4"
+tempfile = "3.8"
+
+[features]
+default = []
+python = ["pyo3"]
+metrics = ["prometheus"]
+sqlite = ["sqlx/sqlite"]
+postgres = ["sqlx/postgres"]
+all = ["python", "metrics", "sqlite", "postgres"]
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[profile.dev]
+opt-level = 0
+debug = true
+overflow-checks = true
+
+# Configurações do maturin
+[tool.maturin]
+module-name = "task_mesh_core._core"
+python-source = "task_mesh_core"
+features = ["python"]
+
