@@ -66,6 +66,9 @@ docs = [
     "mkdocstrings[python]>=0.24.0",
 ]
 
+[project.scripts]
+arkitect-mcp = "arkitect.mcp.server:main"
+
 [project.urls]
 Repository = "https://github.com/eon-framework/arkitect"
 Documentation = "https://arkitect.eonframework.dev"

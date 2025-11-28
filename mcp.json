@@ -1,0 +1,40 @@
+{
+  "mcpServers": {
+    "arkitect": {
+      "command": "python",
+      "args": ["-m", "arkitect.mcp.server"],
+      "env": {},
+      "description": "Arkitect Task Orchestration Server",
+      "capabilities": {
+        "tools": {
+          "list_tasks": {
+            "description": "List tasks with optional filtering",
+            "parameters": {
+              "status": "Task status filter (pending, running, completed, failed)",
+              "priority": "Priority filter (critical, high, medium, low)"
+            }
+          },
+          "create_task": {
+            "description": "Create a new task",
+            "parameters": {
+              "name": "Task name (required)",
+              "description": "Task description",
+              "priority": "Task priority (default: medium)",
+              "layer": "Execution layer (default: default)"
+            }
+          },
+          "get_metrics": {
+            "description": "Get system performance metrics",
+            "parameters": {}
+          },
+          "get_task_details": {
+            "description": "Get detailed information about a specific task",
+            "parameters": {
+              "task_id": "Task identifier (required)"
+            }
+          }
+        }
+      }
+    }
+  }
+}

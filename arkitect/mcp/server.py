@@ -79,5 +79,9 @@ async def get_task_details(task_id: str) -> Dict[str, Any]:
         raise ValueError(f"Task with ID {task_id} not found")
     return task
 
-if __name__ == "__main__":
+def main():
+    """Main entry point for the MCP server."""
     mcp.run()
+
+if __name__ == "__main__":
+    main()
