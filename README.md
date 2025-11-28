@@ -17,7 +17,16 @@
 
 ## 🎯 What is Arkitect?
 
-Arkitect is a **high-performance agent orchestration platform** designed for developers who need intelligent task automation and coding assistance. Built with a hybrid Rust/Python architecture, it provides blazing-fast execution while maintaining the flexibility developers expect.
+**Arkitect** is a production-grade orchestration platform designed to bridge the gap between high-performance computing and modern AI agent systems. Built with a hybrid **Rust/Python** architecture, it provides a robust foundation for building, managing, and scaling autonomous agent workflows.
+
+Unlike traditional task queues, Arkitect is built from the ground up for **AI Agents**, featuring native **MCP (Model Context Protocol)** integration that allows LLMs to directly perceive and manipulate the runtime environment.
+
+### 🌟 Key Capabilities
+
+- **Intelligent Orchestration**: DAG-based scheduler with advanced algorithms (SJF, Round Robin, Deadline).
+- **Native MCP Support**: Instantly compatible with Claude, Cursor, and other AI assistants.
+- **Multi-Agent Coordination**: Manages collaboration, resource sharing, and trust between agents.
+- **Enterprise Observability**: Prometheus metrics, health monitoring, and structured logging.
 
 ### Why Arkitect?
 
