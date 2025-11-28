@@ -6,6 +6,10 @@
 [![Python](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Rust](https://img.shields.io/badge/rust-1.75+-orange.svg)](https://rustup.rs/)
 [![MCP](https://img.shields.io/badge/MCP-enabled-green.svg)](https://modelcontextprotocol.io)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![GitHub last commit](https://img.shields.io/github/last-commit/SH1W4/arkitect)](https://github.com/SH1W4/arkitect/commits/master)
+[![GitHub issues](https://img.shields.io/github/issues/SH1W4/arkitect)](https://github.com/SH1W4/arkitect/issues)
 
 ## 🎯 What is Arkitect?
 
@@ -204,6 +208,19 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Issues**: [GitHub Issues](https://github.com/SH1W4/arkitect/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/SH1W4/arkitect/discussions)
+
+## 📊 Project Stats
+
+- **Language**: Python (65%), Rust (30%), Other (5%)
+- **Architecture**: Hybrid Rust/Python microservices
+- **Code Quality**: Black formatted, type-hinted, documented
+- **License**: MIT - free for commercial and personal use
+
+## 👤 Author
+
+**SH1W4**
+- GitHub: [@SH1W4](https://github.com/SH1W4)
+- Project: [Arkitect](https://github.com/SH1W4/arkitect)
 
 ---
 

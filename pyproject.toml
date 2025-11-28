@@ -70,9 +70,11 @@ docs = [
 arkitect-mcp = "arkitect.mcp.server:main"
 
 [project.urls]
-Repository = "https://github.com/eon-framework/arkitect"
-Documentation = "https://arkitect.eonframework.dev"
-"Bug Tracker" = "https://github.com/eon-framework/arkitect/issues"
+Repository = "https://github.com/SH1W4/arkitect"
+Homepage = "https://github.com/SH1W4/arkitect"
+Documentation = "https://github.com/SH1W4/arkitect#readme"
+"Bug Tracker" = "https://github.com/SH1W4/arkitect/issues"
+Changelog = "https://github.com/SH1W4/arkitect/blob/master/CHANGELOG.md"
 
 [tool.maturin]
 module-name = "arkitect._core"
