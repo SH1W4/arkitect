@@ -1,15 +1,14 @@
-"""ARKITECT - Plataforma Simbiótica de Meta-Governança para Agentes IA.
+"""ARKITECT - High-Performance Agent Orchestration Platform.
 
-ARKITECT é uma plataforma avançada que combina componentes Rust de alta performance
-com a flexibilidade do Python para criar um ecossistema simbiótico de agentes IA
-com capacidades de meta-governança e evolução autônoma.
+ARKITECT is a professional platform for task orchestration and agent coordination,
+designed for developers who need reliable, scalable automation.
 
-Características principais:
-- Arquitetura híbrida Rust+Python com bindings via maturin
-- Sistema de agentes autônomos com capacidades evolutivas
-- Meta-governança adaptativa e auto-organizante
-- Monitoramento e observabilidade integrados
-- Escalabilidade horizontal e vertical
+Key Features:
+- Advanced task scheduling with multiple strategies
+- Multi-agent coordination and collaboration
+- Comprehensive metrics and monitoring
+- MCP (Model Context Protocol) integration
+- Production-ready architecture
 """
 
 from importlib.metadata import version, PackageNotFoundError
@@ -17,17 +16,19 @@ from importlib.metadata import version, PackageNotFoundError
 try:
     __version__ = version("arkitect")
 except PackageNotFoundError:
-    __version__ = "0.1.0-dev"
+    __version__ = "0.2.0"
 
-__author__ = "EON Framework Team"
-__email__ = "contact@eonframework.dev"
-__description__ = "Plataforma Simbiótica de Meta-Governança para Agentes IA"
+__author__ = "SH1W4"
+__email__ = "contact@arkitect.dev"
+__description__ = "High-Performance Agent Orchestration Platform"
 
-# Expor principais componentes
+# Expose main components
 from arkitect.core import (
-    QuantumCore,
-    SymbioticEngine,
-    ConsciousnessLayer,
+    TaskScheduler,
+    SchedulingStrategy,
+    AgentCoordinator,
+    CoordinationType,
+    MetricsCollector,
 )
 
 from arkitect.agents import (
@@ -41,7 +42,7 @@ from arkitect.api import (
     create_app,
 )
 
-# Configurar logging padrão
+# Configure logging
 import logging
 import structlog
 
@@ -65,37 +66,21 @@ structlog.configure(
 
 logger = structlog.get_logger(__name__)
 
-# Verificar disponibilidade dos componentes Rust
-try:
-    from arkitect._core import (
-        quantum_bridge,
-        symbiotic_processor,
-        consciousness_matrix,
-    )
-    RUST_AVAILABLE = True
-    logger.info("Componentes Rust carregados com sucesso", version=__version__)
-except ImportError as e:
-    RUST_AVAILABLE = False
-    logger.warning(
-        "Componentes Rust não disponíveis", 
-        error=str(e),
-        fallback="usando implementação Python pura"
-    )
-
 __all__ = [
     "__version__",
     "__author__", 
     "__email__",
     "__description__",
-    "QuantumCore",
-    "SymbioticEngine",
-    "ConsciousnessLayer",
+    "TaskScheduler",
+    "SchedulingStrategy",
+    "AgentCoordinator",
+    "CoordinationType",
+    "MetricsCollector",
     "BaseAgent",
     "EvolutionaryAgent", 
     "MetaGovernanceAgent",
     "APIServer",
     "create_app",
-    "RUST_AVAILABLE",
     "logger",
 ]
 

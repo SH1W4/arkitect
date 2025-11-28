@@ -37,18 +37,18 @@ class MetaGovernanceAgent(BaseAgent):
     def __init__(
         self,
         id: Optional[str] = None,
-        quantum_core=None,
-        symbiotic_engine=None
+        task_scheduler=None,
+        agent_coordinator=None
     ):
         """
         Initialize the Meta-Governance Agent.
         
         Args:
             id: Unique agent identifier
-            quantum_core: Optional QuantumCore instance
-            symbiotic_engine: Optional SymbioticEngine instance
+            task_scheduler: Optional TaskScheduler instance
+            agent_coordinator: Optional AgentCoordinator instance
         """
-        super().__init__(id, quantum_core, symbiotic_engine)
+        super().__init__(id, task_scheduler, agent_coordinator)
         self.policies: Dict[str, GovernancePolicy] = {}
         self.managed_agents: List[str] = []
         self.decisions_made = 0

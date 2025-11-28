@@ -1,16 +1,18 @@
 """Módulo Core do ARKITECT.
 
-Contains the fundamental components for quantum processing,
-symbiotic engines, and consciousness layers.
+Contains the fundamental components for task scheduling,
+agent coordination, and metrics collection.
 """
 
-from arkitect.core.quantum import QuantumCore
-from arkitect.core.symbiotic import SymbioticEngine
-from arkitect.core.consciousness import ConsciousnessLayer
+from arkitect.core.scheduler import TaskScheduler, SchedulingStrategy
+from arkitect.core.coordinator import AgentCoordinator, CoordinationType
+from arkitect.core.metrics import MetricsCollector
 
 __all__ = [
-    "QuantumCore",
-    "SymbioticEngine", 
-    "ConsciousnessLayer",
+    "TaskScheduler",
+    "SchedulingStrategy",
+    "AgentCoordinator",
+    "CoordinationType",
+    "MetricsCollector",
 ]
 

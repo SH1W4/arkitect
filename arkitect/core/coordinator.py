@@ -1,8 +1,8 @@
 """
-Symbiotic Engine Module - Agent Collaboration System
+Agent Coordinator Module - Multi-Agent Collaboration
 
-This module manages symbiotic relationships between agents,
-enabling collaborative task execution and resource sharing.
+This module manages collaboration and coordination between agents,
+enabling efficient resource sharing and distributed task execution.
 """
 
 from typing import Dict, List, Set, Optional, Any
@@ -13,58 +13,58 @@ from datetime import datetime
 logger = logging.getLogger(__name__)
 
 
-class SymbiosisType(Enum):
-    """Types of symbiotic relationships."""
-    MUTUALISM = "mutualism"  # Both benefit
-    COMMENSALISM = "commensalism"  # One benefits, other unaffected
-    PARASITISM = "parasitism"  # One benefits at expense of other
-    COMPETITION = "competition"  # Compete for resources
+class CoordinationType(Enum):
+    """Types of agent coordination."""
+    COLLABORATIVE = "collaborative"  # Agents work together
+    INDEPENDENT = "independent"  # Agents work separately  
+    DELEGATED = "delegated"  # One agent delegates to others
+    COMPETITIVE = "competitive"  # Agents compete
 
 
-class SymbioticRelationship:
-    """Represents a symbiotic relationship between two agents."""
+class AgentConnection:
+    """Represents a connection between two agents."""
     
     def __init__(
         self,
         agent_a: str,
         agent_b: str,
-        relationship_type: SymbiosisType,
-        strength: float = 0.5
+        coordination_type: CoordinationType,
+        trust_score: float = 0.5
     ):
         self.agent_a = agent_a
         self.agent_b = agent_b
-        self.relationship_type = relationship_type
-        self.strength = min(max(strength, 0.0), 1.0)  # Clamp to [0, 1]
+        self.coordination_type = coordination_type
+        self.trust_score = min(max(trust_score, 0.0), 1.0)  # Clamp to [0, 1]
         self.created_at = datetime.utcnow()
         self.interactions = 0
     
-    def evolve(self, outcome: float) -> None:
+    def update_trust(self, outcome: float) -> None:
         """
-        Evolve relationship based on interaction outcome.
+        Update trust score based on interaction outcome.
         
         Args:
             outcome: Interaction outcome (-1.0 to 1.0)
         """
         self.interactions += 1
-        # Adjust strength based on outcome
+        # Adjust trust based on outcome
         delta = outcome * 0.1
-        self.strength = min(max(self.strength + delta, 0.0), 1.0)
+        self.trust_score = min(max(self.trust_score + delta, 0.0), 1.0)
 
 
-class SymbioticEngine:
+class AgentCoordinator:
     """
-    Symbiotic Engine for managing agent collaboration.
+    Agent Coordinator for managing multi-agent collaboration.
     
-    Handles relationship formation, evolution, and resource
-    sharing between agents in the ecosystem.
+    Handles connection formation, resource sharing, and
+    coordination between agents in the system.
     """
     
     def __init__(self):
-        """Initialize the Symbiotic Engine."""
+        """Initialize the Agent Coordinator."""
         self.agents: Set[str] = set()
-        self.relationships: Dict[tuple, SymbioticRelationship] = {}
+        self.connections: Dict[tuple, AgentConnection] = {}
         self.resource_pool: Dict[str, float] = {}
-        logger.info("SymbioticEngine initialized")
+        logger.info("AgentCoordinator initialized")
     
     def register_agent(self, agent_id: str) -> bool:
         """
@@ -85,19 +85,19 @@ class SymbioticEngine:
         logger.info(f"Agent {agent_id} registered")
         return True
     
-    def establish_connection(
+    def connect_agents(
         self,
         agent_a: str,
         agent_b: str,
-        relationship_type: SymbiosisType = SymbiosisType.MUTUALISM
+        coordination_type: CoordinationType = CoordinationType.COLLABORATIVE
     ) -> bool:
         """
-        Establish a symbiotic connection between two agents.
+        Connect two agents for coordination.
         
         Args:
             agent_a: First agent ID
             agent_b: Second agent ID
-            relationship_type: Type of symbiotic relationship
+            coordination_type: Type of coordination
             
         Returns:
             True if connection established
@@ -108,21 +108,21 @@ class SymbioticEngine:
         if agent_b not in self.agents:
             self.register_agent(agent_b)
         
-        # Create relationship key (sorted for consistency)
+        # Create connection key (sorted for consistency)
         key = tuple(sorted([agent_a, agent_b]))
         
-        if key in self.relationships:
-            logger.warning(f"Relationship between {agent_a} and {agent_b} already exists")
+        if key in self.connections:
+            logger.warning(f"Connection between {agent_a} and {agent_b} already exists")
             return False
         
-        # Create new relationship
-        relationship = SymbioticRelationship(
-            agent_a, agent_b, relationship_type
+        # Create new connection
+        connection = AgentConnection(
+            agent_a, agent_b, coordination_type
         )
-        self.relationships[key] = relationship
+        self.connections[key] = connection
         
         logger.info(
-            f"Established {relationship_type.value} relationship "
+            f"Established {coordination_type.value} connection "
             f"between {agent_a} and {agent_b}"
         )
         return True

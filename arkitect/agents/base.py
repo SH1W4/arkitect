@@ -32,20 +32,20 @@ class BaseAgent:
     def __init__(
         self,
         id: Optional[str] = None,
-        quantum_core=None,
-        symbiotic_engine=None
+        task_scheduler=None,
+        agent_coordinator=None
     ):
         """
         Initialize the Base Agent.
         
         Args:
             id: Unique agent identifier (auto-generated if not provided)
-            quantum_core: Optional QuantumCore instance
-            symbiotic_engine: Optional SymbioticEngine instance
+            task_scheduler: Optional TaskScheduler instance
+            agent_coordinator: Optional AgentCoordinator instance
         """
         self.id = id or f"agent_{uuid.uuid4().hex[:8]}"
-        self.quantum_core = quantum_core
-        self.symbiotic_engine = symbiotic_engine
+        self.task_scheduler = task_scheduler
+        self.agent_coordinator = agent_coordinator
         self.status = AgentStatus.IDLE
         self.created_at = datetime.utcnow()
         self.tasks_completed = 0
@@ -53,9 +53,9 @@ class BaseAgent:
         self.capabilities: List[str] = []
         self.memory: Dict[str, Any] = {}
         
-        # Register with symbiotic engine if provided
-        if self.symbiotic_engine:
-            self.symbiotic_engine.register_agent(self.id)
+        # Register with coordinator if provided
+        if self.agent_coordinator:
+            self.agent_coordinator.register_agent(self.id)
         
         logger.info(f"BaseAgent {self.id} initialized")
     

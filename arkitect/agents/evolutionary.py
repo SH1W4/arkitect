@@ -24,8 +24,8 @@ class EvolutionaryAgent(BaseAgent):
     def __init__(
         self,
         id: Optional[str] = None,
-        quantum_core=None,
-        symbiotic_engine=None,
+        task_scheduler=None,
+        agent_coordinator=None,
         mutation_rate: float = 0.1
     ):
         """
@@ -33,11 +33,11 @@ class EvolutionaryAgent(BaseAgent):
         
         Args:
             id: Unique agent identifier
-            quantum_core: Optional QuantumCore instance
-            symbiotic_engine: Optional SymbioticEngine instance
+            task_scheduler: Optional TaskScheduler instance
+            agent_coordinator: Optional AgentCoordinator instance
             mutation_rate: Probability of strategy mutation (0.0 to 1.0)
         """
-        super().__init__(id, quantum_core, symbiotic_engine)
+        super().__init__(id, task_scheduler, agent_coordinator)
         self.mutation_rate = min(max(mutation_rate, 0.0), 1.0)
         self.generation = 1
         self.fitness_score = 0.0
