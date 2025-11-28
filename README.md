@@ -11,6 +11,10 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/SH1W4/arkitect)](https://github.com/SH1W4/arkitect/commits/master)
 [![GitHub issues](https://img.shields.io/github/issues/SH1W4/arkitect)](https://github.com/SH1W4/arkitect/issues)
 
+<p align="center">
+  <img src="docs/images/logo.png" alt="Arkitect Logo" width="400"/>
+</p>
+
 ## 🎯 What is Arkitect?
 
 Arkitect is a **high-performance agent orchestration platform** designed for developers who need intelligent task automation and coding assistance. Built with a hybrid Rust/Python architecture, it provides blazing-fast execution while maintaining the flexibility developers expect.
