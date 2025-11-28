@@ -44,3 +44,16 @@ venv/
 __pycache__/
 *.pyc
 .DS_Store
+
+# Archives (cleanup)
+*.zip
+*.tar.gz
+*.rar
+
+# Windows
+*.lnk
+Thumbs.db
+
+# Temporary
+prototype_tmp/
+temp/
